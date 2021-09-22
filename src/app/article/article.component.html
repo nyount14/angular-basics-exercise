@@ -1,0 +1,12 @@
+
+<h1 [ngStyle] ="{backgroundColor: colorChoice() }">{{ title }}</h1>
+<p>{{ content }}</p>
+
+
+<button (click)="reverseValue()">change isTechRelated</button>
+
+<p *ngIf="isTechRelated; else NotTechRelated">Tech Related</p>
+
+<ng-template #NotTechRelated>
+  <p>Not tech related</p>
+</ng-template>
